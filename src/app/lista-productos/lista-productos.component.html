@@ -1,0 +1,22 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Titulo</th>
+            <th>Autor</th>
+            <th>Precio</th>
+            <th>Editorial</th>
+            <th>Descripcion</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of lista">
+            <td>{{ item.nombre }}</td>
+            <td>{{ item.apellidoAutor }}, {{ item.nombreAutor }}</td>
+            <td>{{ item.precio }}</td>
+            <td>{{ item.editorial }}</td>
+            <td>{{ item.descripcion }}</td>
+            <td><button type="button" class="btn btn-primary" (click)=agregarCarrito(item)>Agregar al carrito</button></td>
+            <td><button type="button" class="btn btn-danger" (click)=eliminar(item.id)>X</button></td>
+        </tr>
+    </tbody>
+</table>
